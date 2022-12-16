@@ -18,9 +18,9 @@ app.use(cors());
 app.use(express.static(path.join(__dirname,"Client/build")))
 
 //Will directly take it to website
-app.get('/', function(req, res) {
-	res.sendFile(path.join(__dirname, 'Client/build', 'index.html'));
-  });
+// app.get('/', function(req, res) {
+// 	res.sendFile(path.join(__dirname, 'Client/build', 'index.html'));
+//   });
 mongoose.connect(url, { useNewUrlParser: true });
 const con = mongoose.connection;
 try {
@@ -65,6 +65,7 @@ app.get("*", (req, res) => {
 	//send back index.html file
 	res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
+
 app.listen(process.env.PORT || 8000, () => {
 	console.log("Listening to port " + port);
 });
