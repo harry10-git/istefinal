@@ -41,7 +41,7 @@ try {
 
 
 const adminrouter = require("./Routes/Admin");
-app.use("/api/admin", adminrouter);
+app.use("/admin", adminrouter);
 
 const boardRouter = require("./Routes/Manual/Board");
 app.use("/api/board", boardRouter);
