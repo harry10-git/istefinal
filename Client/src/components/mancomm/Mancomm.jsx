@@ -16,6 +16,7 @@ const Mancomm = () => {
 				const response = await axios.get(url);
 				console.log(response);
 				const data = response.data;
+				console.log(data)
 				SetRepo(data);
 			} catch (error) {
 				console.log(error);

@@ -59,7 +59,7 @@ const emailRouter = require("./Routes/Manual/Email");
 app.use("/api/email", emailRouter);
 
 const MCWCRouter = require("./Routes/Manual/MCWC");
-app.use("/api/MCWC", MCWCRouter);
+app.use("/members/api/MCWC", MCWCRouter);
 
 app.get("/", (req, res) => {
 	//send back index.html file
