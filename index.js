@@ -61,9 +61,21 @@ app.use("/api/email", emailRouter);
 const MCWCRouter = require("./Routes/Manual/MCWC");
 app.use("/api/MCWC", MCWCRouter);
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
 	//send back index.html file
-	res.sendFile(path.join(__dirname, "client/build/index.html"));
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
+app.get("/events", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
+app.get("/acumen", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
+app.get("/members", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
 });
 
 app.listen(process.env.PORT || 8000, () => {

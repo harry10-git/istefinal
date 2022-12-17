@@ -8,7 +8,7 @@ import axios from "axios";
 import MembersName from "../membersname/MembersName";
 const Mancomm = () => {
 	const [myrepo, SetRepo] = useState([]);
-	const url = "api/MCWC/getMC";
+	const url = "http://istemanipal.com/api/MCWC/getMC";
 
 	useEffect(() => {
 		const getrepo = async () => {
