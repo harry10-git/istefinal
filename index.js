@@ -78,6 +78,15 @@ app.get("/members", (req, res) => {
 	res.sendFile(path.join(__dirname, "Client/build/index.html"));
 });
 
+app.get("/members/mc", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
+
+app.get("/members/wc", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
 app.listen(process.env.PORT || 8000, () => {
 	console.log("Listening to port " + port);
 });
