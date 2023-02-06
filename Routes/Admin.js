@@ -1,25 +1,26 @@
+///IMPORTING PACKAGES
 const AdminBro=require('adminjs')
 const AdminBroExpress=require('@adminjs/express')
 const AdminBroMongoose=require('@adminjs/mongoose')
 const mongoose = require('mongoose');
+
+///CALLING ALL MODELS
 const Board=require('../Models/Board')
 const Event=require('../Models/Events')
 const Acumen=require('../Models/Acumen')
 const Timer=require('../Models/Timer')
 const MC=require('../Models/MCWC').MCData
 const WC=require('../Models/MCWC').WCData
-//const url='mongodb+srv://ISTE:manipalchapteriste@cluster0.dnubiux.mongodb.net/?retryWrites=true&w=majority/test'
 
-
+/// INITIALISING ADMINBRO
 AdminBro.registerAdapter({
     Database:AdminBroMongoose.Database,
     Resource:AdminBroMongoose.Resource
     
 })
 
-
+/// SETTING UP ADMINBRO BY CONNECTING TO DATABASE, LOGO AND NAME OF ISTE MANIPAL
 const adminOptions = {
-    // We pass Category to `resources`
     databases: [mongoose],
     rootpath:'/admin',
     branding:{
@@ -34,12 +35,14 @@ const adminBro=new AdminBro(
     adminOptions
 )
 
+///ADMIN CREDENTIALS
 const Admin={
     email:'admin@istemanipal.com',
     password:'studentchapteriste'
 
 }
 
+/// SETTING UP AUTHENTICATIONS
 const authenticate = async (email, password) => {
     if (email === Admin.email && password === Admin.password) {
       return Promise.resolve(Admin)

@@ -36,6 +36,9 @@ const Navbar = () => {
 						</Link>
 					</li>
 					<li className="nav-item">
+						<a href="http://aurora.istemanipal.com/" className="nav-links">Aurora</a>
+					</li>
+					<li className="nav-item">
 						<Link to="/acumen" className="nav-links">
 							Acumen
 						</Link>
