@@ -62,32 +62,32 @@ app.use("/members/api/MCWC", MCWCRouter);
 
 ///THESE ALL ROUTES ARE SETUP IN ORDER TO AVOID WEBSITE CRASHING AND CLASHING OF FRONTEND&BACKEND ROUTE
 
-// app.get("/", (req, res) => {
-// 	//send back index.html file
-// 	res.sendFile(path.join(__dirname, "Client/build/index.html"));
-// });
-// app.get("/events", (req, res) => {
-// 	//send back index.html file
-// 	res.sendFile(path.join(__dirname, "Client/build/index.html"));
-// });
-// app.get("/acumen", (req, res) => {
-// 	//send back index.html file
-// 	res.sendFile(path.join(__dirname, "Client/build/index.html"));
-// });
-// app.get("/members", (req, res) => {
-// 	//send back index.html file
-// 	res.sendFile(path.join(__dirname, "Client/build/index.html"));
-// });
+app.get("/", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
+app.get("/events", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
+app.get("/acumen", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
+app.get("/members", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
 
-// app.get("/members/mc", (req, res) => {
-// 	//send back index.html file
-// 	res.sendFile(path.join(__dirname, "Client/build/index.html"));
-// });
+app.get("/members/mc", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
 
-// app.get("/members/wc", (req, res) => {
-// 	//send back index.html file
-// 	res.sendFile(path.join(__dirname, "Client/build/index.html"));
-// });
+app.get("/members/wc", (req, res) => {
+	//send back index.html file
+	res.sendFile(path.join(__dirname, "Client/build/index.html"));
+});
 
 //LISTEN TO PORT
 app.listen(process.env.PORT || 8000, () => {
