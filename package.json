@@ -4,10 +4,10 @@
 	"description": "For purpose of ISTE website and admin portal",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "nodemon index.js",
 		"client": "cd Client && npm start",
-		"start": "nodemon index.js"
+		"start": "nodemon index.js",
+		"test": "mocha"
 	},
 	"repository": {
 		"type": "git",
@@ -32,6 +32,7 @@
 		"express-formidable": "^1.2.0",
 		"express-session": "^1.17.3",
 		"http-proxy-middleware": "^2.0.6",
+		"mocha": "^10.2.0",
 		"mongod": "^2.0.0",
 		"mongoose": "^6.6.1",
 		"nodemailer": "^6.8.0",
